@@ -38,8 +38,6 @@ CREATE TABLE rooms
 ( id NUMBER(10) NOT NULL,
   id_type NUMBER(10) NOT NULL,
   room_number NUMBER(10) NOT NULL,
-  place_count NUMBER(5) NOT NULL,
-  base_price NUMBER(20),
   CONSTRAINT rooms_pk PRIMARY KEY (id),
   CONSTRAINT rooms_unique UNIQUE (room_number),
   CONSTRAINT fk_rooms_room_types FOREIGN KEY (id_type) REFERENCES room_types(id)
